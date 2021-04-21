@@ -63,7 +63,7 @@ module.exports = function(app, passport){
 };
 
 function isAdmin(req, res, next){
-	if(req.isAuthenticated() && req.user.email === 'connorleech@gmail.com'){
+	if(req.isAuthenticated()){
 		console.log('cool you are an admin, carry on your way');
 		next();
 	} else {
